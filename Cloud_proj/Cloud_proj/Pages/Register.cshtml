@@ -1,0 +1,39 @@
+﻿@page
+@model Cloud_proj.Pages.RegisterModel
+@{
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Register</h1>
+
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger">
+
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RegModel.userEmail">User Email</label>
+                    <input type="text" asp-for="RegModel.userEmail" class="form-control" />
+                    <span asp-validation-for="RegModel.userEmail" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RegModel.userPassword">Password</label>
+                    <input type="password" asp-for="RegModel.userPassword" class="form-control" />
+                    <span asp-validation-for="RegModel.userPassword" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RegModel.confirmPass">Confirm password</label>
+                    <input type="password" asp-for="RegModel.confirmPass" class="form-control" />
+                    <span asp-validation-for="RegModel.confirmPass" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Continue</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

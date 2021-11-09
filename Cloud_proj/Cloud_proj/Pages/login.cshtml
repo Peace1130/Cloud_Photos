@@ -1,0 +1,38 @@
+﻿@page
+@model Cloud_proj.Pages.loginModel
+@{
+}
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-end">
+        <div class="col-sm-12 col-md-12 col-lg-11">
+            <h1 class="mb-2">Login</h1>
+
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger">
+
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="logmodel.userEmail">User Email</label>
+                    <input type="text" asp-for="logmodel.userEmail" class="form-control" />
+                    <span asp-validation-for="logmodel.userEmail" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="logmodel.userPassword">Password</label>
+                    <input type="password" asp-for="logmodel.userPassword" class="form-control" />
+                    <span asp-validation-for="logmodel.userPassword" class="text-danger"></span>
+                </div>
+
+                <div class="mb-2 form-check">
+                    <input type="checkbox" asp-for="logmodel.rememberMe" class="form-check-input" />
+                    <label class="form-check-label" asp-for="logmodel.rememberMe">Remember User?</label>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
