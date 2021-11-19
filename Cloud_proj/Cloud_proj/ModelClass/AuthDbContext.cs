@@ -13,5 +13,6 @@ namespace Cloud_proj.ModelClass
         {
 
         }
+        public virtual DbSet<Photo> Photo { get; set; }
     }
 }
